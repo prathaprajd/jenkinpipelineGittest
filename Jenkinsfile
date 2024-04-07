@@ -12,6 +12,11 @@ pipeline{
     //    string(name: 'stringParameter',defaultValue: 'something',description:'string paramter checking')
     //}
     stages{
+        stage('Playbook checkout'){
+            steps{
+                checkout scm
+            }
+        }
         //node{
         stage("running the api"){
             steps{
